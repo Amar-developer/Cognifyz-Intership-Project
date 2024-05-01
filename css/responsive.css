@@ -99,3 +99,37 @@
     font-size: 0.625rem;
   }
 }
+
+/* Responsive Styles */
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+  /* Adjust font size and padding for smaller screens */
+  #pagination-controls button,
+  #pagination-controls ul {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  /* Adjust the display of page info */
+  #page-info {
+    display: none; /* Hide page info on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust font size and padding for smaller screens */
+  #pagination-controls button,
+  #pagination-controls ul {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 576px) {
+  .form-popover {
+    width: 100%;
+    padding: 15px;
+  }
+}

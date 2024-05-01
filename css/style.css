@@ -69,6 +69,20 @@ p {
   box-shadow: none;
 }
 
+#header .navbar .navbar-collapse .nav-item .dropdown .dropdown-menu {
+  width: 500px !important;
+}
+
+/* Custom style to increase the width of the dropdown */
+.navbar .dropdown-menu {
+  width: 600px;
+}
+
+/* Additional custom styling for dropdown items */
+.dropdown-item {
+  padding: 10px 15px;
+}
+
 /* Home CSS */
 .home .home-banner-1,
 .home .home-banner-2 {
@@ -79,7 +93,7 @@ p {
   position: relative;
 }
 .home .home-banner-1 {
-  background-image: url("../images/slide1.jpg");
+  background-image: url("../images/slide3.jpg");
 }
 .home .home-banner-2 {
   background-image: url("../images/slide2.jpg");
@@ -107,6 +121,7 @@ p {
   font-weight: 600;
   color: var(--text-danger);
 }
+
 /* Offer CSS */
 .offers {
   padding-top: 8.75rem;
@@ -214,22 +229,10 @@ p {
   text-decoration: none;
   color: var(--text-black);
 }
-.product-list .product-image img {
-  transition: all 500ms ease-in-out;
-}
-.product-list .product-image .product-image-secondary {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.product-list .product-image:hover .product-image-secondary {
-  opacity: 1;
-}
+
 .product-list .product-image .sale {
   background: var(--bg-danger);
+
   border-radius: 0.313rem;
   color: var(--text-white);
   font-size: 0.813rem;
@@ -242,6 +245,14 @@ p {
   top: 1.188rem;
   z-index: 99;
 }
+.product-list .product-image .product-image-first {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: fill;
+}
+
 .product-list .product-name h3 {
   font-size: 1.125rem;
   color: var(--text-black);
@@ -265,13 +276,16 @@ p {
 }
 .product-list .product-name .add_to_Card {
   background: transparent;
-  border: none;
-  font-size: 1.2rem;
+  border: 1px solid var(--bg-danger);
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease 0s;
 }
 .product-list .product-name .add_to_Card:hover {
-  color: var(--text-danger);
+  color: white;
+  background-color: #f63440;
 }
 
 .products .up_to_off {
@@ -307,6 +321,53 @@ p {
   z-index: 3;
 }
 
+/* pagination */
+
+/* Style the pagination controls container */
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style the pagination buttons */
+#pagination-controls button {
+  color: var(--bg-danger);
+  border: 1px solid #f63440;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 5px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#pagination-controls button:active {
+  background-color: #f63440;
+  color: white;
+}
+
+/* Style for disabled buttons */
+#pagination-controls button:disabled {
+  background-color: white;
+  cursor: not-allowed;
+}
+
+/* Hover effect for pagination buttons */
+#pagination-controls button:hover:not(:disabled) {
+  background-color: var(--bg-danger);
+  color: white;
+}
+
+/* Style the page information */
+#page-info {
+  font-size: 16px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
 /* Special CSS */
 .special {
   padding: 6rem 0;
@@ -494,4 +555,48 @@ span .font-icon {
 span .top-arrow {
   font-size: 2rem;
   color: #f63440;
+}
+
+/* Overlay styles for background blur */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(110, 109, 109, 0.9);
+  z-index: 998;
+  filter: blur(5px);
+}
+
+/* Form popover styles */
+.form-popover {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+/* Close icon styles */
+.form-popover .close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: gray;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 12px;
 }
