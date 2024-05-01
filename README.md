@@ -1,6 +1,3 @@
-Creating a comprehensive README file for an e-commerce project on GitHub is essential to provide information and guidance to potential users, contributors, and maintainers. Here's a sample README file for your e-commerce project:
-
----
 
 # E-Commerce Project
 
