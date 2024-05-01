@@ -65,7 +65,7 @@ The application should now be running at `http://localhost:3000` (or the specifi
 
 ## Technologies Used
 
-- **Frontend**: [React](https://reactjs.org/), [Bootstrap](https://getbootstrap.com/)
+- **Frontend**: Html,Css,Javascript [Bootstrap](https://getbootstrap.com/)
 - **Backend**: [Api](https://dummyjson.com/)
 
 ## Contributing
@@ -83,4 +83,3 @@ This project is licensed under the [MIT License](LICENSE). You are free to use a
 
 ---
 
-Feel free to modify the README file as needed to suit the specifics of your project. Include additional sections if necessary, such as "API Documentation" or "Known Issues" for more detailed information.
